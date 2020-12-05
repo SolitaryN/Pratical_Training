@@ -4520,3 +4520,6 @@ Binding(SHIFT+DEL,
 
 !ENTRY com.genuitec.eclipse.core 1 0 2020-12-05 13:59:32.767
 !MESSAGE Unable to locate .myeclipse.properties file
+
+!ENTRY org.eclipse.ui 4 4 2020-12-05 14:55:07.000
+!MESSAGE Plug-in 'com.genuitec.eclipse.ast.deploy.core' contributed an invalid Menu Extension (Path: 'menuServers' is invalid): com.genuitec.myeclipse.deploy.action.manage
