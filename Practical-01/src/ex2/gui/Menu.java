@@ -145,8 +145,6 @@ public class Menu extends JFrame{
 		btnEdit.addActionListener(new ModifyHandler());
 		btnRemove.addActionListener(new RemoveHandler());
 		jmiRemove.addActionListener(new RemoveHandler());
-		
-		
 	}
 	
 	private class RegisteHandler implements ActionListener{//зЂВс

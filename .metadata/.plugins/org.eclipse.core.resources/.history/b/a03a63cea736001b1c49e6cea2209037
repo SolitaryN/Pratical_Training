@@ -1,0 +1,12 @@
+package ex2.test;
+
+import javax.swing.JFrame;
+
+public class Test01 {
+	public static void main(String[] args){
+		JFrame jf = new JFrame();
+		jf.setBounds(200, 200, 400, 400);
+		jf.setVisible(true);
+		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

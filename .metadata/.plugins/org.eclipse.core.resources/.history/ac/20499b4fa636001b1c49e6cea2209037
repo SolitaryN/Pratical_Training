@@ -1,0 +1,8 @@
+package ex2.test;
+
+import javax.swing.JFrame;
+
+public class Test01 {
+	JFrame jf = new JFrame();
+	
+}

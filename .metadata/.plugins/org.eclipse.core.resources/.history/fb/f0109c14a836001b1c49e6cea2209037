@@ -1,0 +1,17 @@
+package ex2.test;
+
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+
+public class Test01 {
+	public static void main(String[] args){
+		JFrame jf = new JFrame();
+		jf.setBounds(200, 200, 400, 400);
+		jf.setVisible(true);
+		final JMenuBar menuBar = new JMenuBar();
+	    JMenu fileMenu = new JMenu("ÎÄ¼þ");
+	    JMenu editMenu = new JMenu("±à¼­"); 
+		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}
