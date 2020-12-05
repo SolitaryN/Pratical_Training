@@ -34,14 +34,14 @@ public class Menu extends JFrame{
 	private JMenuItem jmiRegiste, jmiSave, jmiLoad, jmiModify, jmiRemove, jmiAddright,jmiRemoveRight,jmiAssignright;
 	private JMenuItem jmiSearchByEmail,jmiSearchAll;
 	
-	private JButton btnRegiste, btnEdit, btnRemove, btnSearch;
+	private JButton btnRegiste, btnEdit, btnRemove, btnSearch; // 界面中的四个加入图片的 button
 	
-	private JFileChooser fileSave,fileLoad;
+	private JFileChooser fileSave,fileLoad; // 保存和加载
 	
-	private UserDao userDao;
+	private UserDao userDao; // 进行 DAO 操作
 	
 	public static void main(String[] args) throws IOException{
-		new Menu().showMe();
+		new Menu().showMe(); // 此时 userDao 被初始化，之后调用 showMe() 函数
 	}	  
 	
 	public Menu(){
@@ -54,14 +54,15 @@ public class Menu extends JFrame{
 		
 		//创建菜单栏
 		JMenuBar  menuBar = new  JMenuBar();
+		
 		//创建菜单
 		JMenu registeMenu = new JMenu("注册(N)");
 		//设置热键
-		registeMenu.setMnemonic(KeyEvent.VK_N);
+		registeMenu.setMnemonic(KeyEvent.VK_N); // 默认就是 Alt + VK_N(就是键盘上的 N键)
 		//创建、并向菜单添加菜单项
 		registeMenu.add(jmiRegiste = new JMenuItem("注册用户"));
 		//设置快捷键
-		jmiRegiste.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N,ActionEvent.CTRL_MASK));
+		jmiRegiste.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, ActionEvent.CTRL_MASK));
 		registeMenu.add(jmiSave = new JMenuItem("保存用户"));
 		registeMenu.add(jmiLoad = new JMenuItem("导入用户"));
 		//将菜单添加到菜单栏
@@ -70,6 +71,7 @@ public class Menu extends JFrame{
 		JMenu editmenu = new JMenu("编辑用户信息(E)");
 		editmenu.setMnemonic(KeyEvent.VK_E);
 		menuBar.add(editmenu);
+		// 这里的构造方法中，后面的参数 ‘M’ 表示设置热键 M，而不用我们后续使用 setMnemonic 来进行设置 
 		editmenu.add(jmiModify = new JMenuItem("修改用户信息(M)",'M'));
 		editmenu.add(jmiRemove = new JMenuItem("删除用户信息(R)",'R'));
 
@@ -88,6 +90,7 @@ public class Menu extends JFrame{
 		
 		this.setJMenuBar(menuBar);
 	}
+	
 	
 	private void createToolBar(){
 		JToolBar toolBar = new JToolBar();  //创建工具栏		
@@ -109,6 +112,7 @@ public class Menu extends JFrame{
 		//将工具栏添加至JFrame，this为当前窗口对象
 		this.add("North",toolBar);
 	}
+	
 	private void init(){
 		//1.创建菜单栏
 		createMenuBar();  
